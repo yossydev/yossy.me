@@ -1,0 +1,224 @@
+---
+import "../styles/global.css";
+
+const links = [
+  { label: "X", value: "@yossydev", href: "https://x.com/yossydev" },
+  { label: "GitHub", value: "github.com/yossydev", href: "https://github.com/yossydev" },
+  { label: "note", value: "note.com/yossydev", href: "https://note.com/yossydev" },
+  { label: "Decks", value: "speakerdeck.com/yossydev", href: "https://speakerdeck.com/yossydev" },
+  { label: "Blog", value: "yossy.dev", href: "https://yossy.dev/" },
+  { label: "Email", value: "yossydev@yossy.dev", href: "mailto:yossydev@yossy.dev" },
+];
+
+const workItems = [
+  {
+    title: "PdM / Product Engineer at aisaac, inc.",
+    details: [
+      { label: "aisaac, inc.", href: "https://aisaac.jp/" },
+      { label: "ラス恋", href: "https://play.google.com/store/apps/details?id=jp.laskoi" },
+    ],
+  },
+  {
+    title: "Member / Invited Expert / Contributor",
+    details: [
+      { label: "ECMA International", href: "https://www.ecma-international.org/" },
+      { label: "TC39", href: "https://tc39.es/" },
+      { label: "Nova", href: "https://github.com/trynova/nova" },
+      { label: "Andromeda", href: "https://github.com/tryandromeda/andromeda" },
+    ],
+  },
+];
+
+const achievementItems = [
+  {
+    title: "JavaScript runtime / engine への100件以上のコントリビュート",
+    body: "Nova / Andromeda など、JavaScript の実行基盤そのものに近いOSSへ継続的に関わっています。",
+    href: "https://github.com/yossydev",
+    meta: "OSS Contributions",
+  },
+  {
+    title: "複数回の技術登壇・資料公開",
+    body: "JavaScript engine、React、Web Performance など、内部実装やパフォーマンスを読み解くテーマで発信しています。",
+    href: "https://speakerdeck.com/yossydev",
+    meta: "Talks / Decks",
+  },
+  {
+    title: "仕様と実装を行き来する技術理解",
+    body: "ECMAScript、test262、ブラウザ/ランタイムの挙動を読み、実装・検証・発信までつなげています。",
+    href: "https://yossy.dev/",
+    meta: "Spec / Implementation",
+  },
+  {
+    title: "プロダクトを前に進めるエンジニアリング",
+    body: "PdM と Product Engineer の両面から、課題整理、優先度判断、実装を分断せずに進めます。",
+    href: "https://aisaac.jp/",
+    meta: "Product",
+  },
+];
+
+const engineeringItems = [
+  "JavaScript / TypeScript と Web Platform を深く読む",
+  "JS engine / runtime / browser behavior への継続的な関心",
+  "OSS の実装、コードリーディング、仕様理解を通じて手を動かす",
+];
+
+const productItems = [
+  "ユーザー課題を言語化し、作るべきものの輪郭を早く掴む",
+  "仮説、優先度、実装コストを往復しながら前に進める",
+  "PdM 的な整理とエンジニアリングを分断せず、一気通貫で扱う",
+];
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Yuto Yoshino / yossydev</title>
+    <meta
+      name="description"
+      content="Yuto Yoshino / yossydev の自己紹介サイト。JavaScript と Web Platform を深く掘る Software Engineer / Product-minded Builder。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yossy.me/" />
+    <meta property="og:title" content="Yuto Yoshino / yossydev" />
+    <meta
+      property="og:description"
+      content="JavaScript と Web Platform を深く掘り、課題整理から実装まで進める Software Engineer / Product-minded Builder。"
+    />
+    <meta property="og:site_name" content="yossy.me" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@yossydev" />
+    <meta name="twitter:title" content="Yuto Yoshino / yossydev" />
+    <meta
+      name="twitter:description"
+      content="Software Engineer / Product-minded Builder in Tokyo."
+    />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="kicker">yossy.me</div>
+        <h1 id="hero-title">Yuto Yoshino / yossydev</h1>
+        <p class="lead">
+          Software Engineer / Product-minded Builder. JavaScript と Web Platform を深く掘りながら、
+          課題の整理から実装まで進めます。
+        </p>
+
+        <div class="terminal-card" aria-label="profile card">
+          <div class="terminal-command">$ npx yossydev</div>
+          <div class="terminal-box">
+            <div class="terminal-line strong">Yuto Yoshino / yossydev</div>
+            <div class="terminal-rule"></div>
+            <dl class="terminal-list">
+              <div>
+                <dt>Work</dt>
+                <dd>PdM / Product Engineer at aisaac</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>JavaScript, Web Platform, Product</dd>
+              </div>
+              <div>
+                <dt>Mode</dt>
+                <dd>Deep implementation + product thinking</dd>
+              </div>
+              <div>
+                <dt>Site</dt>
+                <dd><a href="https://yossy.dev/">https://yossy.dev/</a></dd>
+              </div>
+            </dl>
+            <div class="terminal-rule"></div>
+            <div class="terminal-note">&gt; build what matters, read what runs</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="about-title">
+        <p class="section-label">about</p>
+        <h2 id="about-title">作ることに向かうまでの背景</h2>
+        <p>
+          サッカーを10年、営業を1年、起業を1年。そのあとエンジニアとして、
+          JavaScript と Web 技術の実装に深く向き合ってきました。
+          いまはエンジニアの枠だけに閉じず、プロダクト、事業、経営に近い問いまで含めて、
+          何を作るべきか、どう伸ばすべきかを考えながら手を動かしています。
+        </p>
+      </section>
+
+      <section class="section" aria-labelledby="work-title">
+        <p class="section-label">work</p>
+        <h2 id="work-title">仕事・所属</h2>
+        <div class="work-list">
+          {
+            workItems.map((item) => (
+              <article class="work-item">
+                <h3>{item.title}</h3>
+                <ul>
+                  {item.details.map((detail) => (
+                    <li>
+                      <a href={detail.href}>{detail.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="split-section" aria-label="strengths">
+        <article class="panel">
+          <p class="section-label">engineering</p>
+          <h2>深く読んで、動くところまで作る</h2>
+          <ul>
+            {engineeringItems.map((item) => <li>{item}</li>)}
+          </ul>
+        </article>
+
+        <article class="panel">
+          <p class="section-label">product</p>
+          <h2>何を作るべきかも一緒に考える</h2>
+          <ul>
+            {productItems.map((item) => <li>{item}</li>)}
+          </ul>
+        </article>
+      </section>
+
+      <section class="section" aria-labelledby="achievements-title">
+        <p class="section-label">achievements</p>
+        <h2 id="achievements-title">具体的にやってきたこと</h2>
+        <div class="achievement-grid">
+          {
+            achievementItems.map((item) => (
+              <a class="achievement-card" href={item.href}>
+                <span>{item.meta ?? "OSS / Web Platform"}</span>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </a>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="section links-section" aria-labelledby="contact-title">
+        <p class="section-label">contact</p>
+        <h2 id="contact-title">連絡・相談</h2>
+        <p>
+          プロダクト、技術、事業の話、登壇や執筆の相談などがあれば、
+          Email か各種アカウントから連絡してください。
+        </p>
+        <div class="links-grid">
+          {
+            links.map((link) => (
+              <a class="link-row" href={link.href}>
+                <span>{link.label}</span>
+                <strong>{link.value}</strong>
+              </a>
+            ))
+          }
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
