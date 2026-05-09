@@ -5,5 +5,11 @@
   "workers_dev": true,
   "assets": {
     "directory": "./dist"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "yossy.me/*",
+      "zone_id": "42a98865bbe38de65a128823a0f155b9"
+    }
+  ]
 }
